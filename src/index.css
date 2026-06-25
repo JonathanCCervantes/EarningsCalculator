@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent layout shift on scrollbar appearance */
+html {
+  overflow-y: scroll;
+}
+
+/* Custom scrollbar for dark mode */
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+/* Remove input number spinners for cleaner look */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* datetime-local icon color in dark mode */
+.dark input[type='datetime-local']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Tap highlight color for mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Focus outline only for keyboard navigation */
+:focus-visible {
+  outline: 2px solid #4040ef;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Thin scrollbar for transaction list */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #4040ef44 transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #4040ef55;
+  border-radius: 9999px;
+}
